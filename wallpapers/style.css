@@ -1,0 +1,56 @@
+.wallpapers {
+    position: relative;
+    display: flex;
+    background: #0B010E;
+    align-content: center;
+    place-items: center;
+    isolation: isolate;
+    min-height: 80vh;
+    overflow: hidden;
+}
+.wallpapers::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/05/49/29/70/1000_F_549297047_fxiIUIxD1AM6Iaw3GjQQ9ZBRrHJQm21q.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 5%;
+}
+.swiper {
+    width: 300px;
+    height: 450px;
+    padding: 50px 0;
+}
+
+.swiper-slide {
+    border: 2px solid rgb(243, 187, 142);
+    position: relative;
+    box-shadow: 0 15px 50px rgba(186, 167, 100, 0.2);
+    border-radius: 20px;
+    user-select: none;
+}
+
+.swiper-slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-position {
+    object-position: 50% 0%;
+}
+@media screen and (max-width: 400px) {
+    .swiper{
+        width: 250px;
+    } 
+}
+@media screen and (max-width: 320px) {
+    .swiper{
+        width: 200px;
+        height: 360px;
+    } 
+}

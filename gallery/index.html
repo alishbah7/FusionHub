@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <!--=============== SCROLL REVEAL CSS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #0B010E;
+            align-content: center;
+            place-items: center;
+            position: relative;
+            isolation: isolate;
+        }
+        body::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-image: url(https://as1.ftcdn.net/v2/jpg/05/49/29/70/1000_F_549297047_fxiIUIxD1AM6Iaw3GjQQ9ZBRrHJQm21q.jpg);
+            background-size: cover;
+            background-position: center;
+            opacity: 5%;
+        }
+        title {
+            --add: 0;
+            display: inline-block;
+            line-height: 100%;
+            font-weight: calc(200 + 500 * var(--add));
+            font-variation-settings: "wdth" calc(62.5 + 37.5 * var(--add));
+            text-transform: uppercase;
+            font-size: 80px;
+            color: rgb(255, 235, 181);
+            text-shadow: 0 0 max(25px,1.3020833333vw) hsla(0,0%,100%,.8);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: font-weight 0.25s, font-variation-settings 0.25s;
+            transition: .5s ease;
+
+        }
+        @media screen and (max-width:850px){
+            title{
+                font-size: 65px;
+            }
+        }
+        @media screen and (max-width:551px){
+            title{
+                font-size: 40px;
+            }
+        }
+        @media screen and (max-width:390px){
+            title{
+                font-size: 30px;
+            }
+        }  
+    </style>
+</head>
+<body>
+    <section class="phototitle" style="
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    ">
+
+      <div class="phototitle" style="margin-top: 20px;">
+        <a href=""><title data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">COMING</title></a><br>
+        <a href=""><title data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400">SOON</title></a>
+      </div>
+    </section>
+    
+    <!--=============== SCROLL REVEAL JS ===============-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
